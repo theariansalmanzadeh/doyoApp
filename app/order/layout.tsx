@@ -1,5 +1,3 @@
-"use client";
-
 import FormWrapper from "@/components/serviceRequest/FormWrapper";
 import TimeModal from "@/components/serviceRequest/whenForm/components/TimeModal";
 import { Box, Stack } from "@mui/material";

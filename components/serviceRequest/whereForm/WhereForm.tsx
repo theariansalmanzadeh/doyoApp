@@ -109,7 +109,7 @@ const WhatForm = () => {
         <Button
           sx={styleBtn}
           onClick={() => {
-            setOrderSection({ title: "sum", page: 4 });
+            setOrderSection({ title: "summary", page: 4 });
           }}
         >
           Next <ArrowForwardIcon />

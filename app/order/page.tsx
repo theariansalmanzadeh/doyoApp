@@ -9,7 +9,7 @@ import Summary from "@/components/summary/Summary";
 import { useOrderSection } from "@/state";
 
 const OrderPage = () => {
-  const [orderSection, setOrderSection] = useOrderSection();
+  const [orderSection] = useOrderSection();
   switch (orderSection.page) {
     case 1:
       return <WhatForm />;
@@ -24,7 +24,6 @@ const OrderPage = () => {
     case 6:
       return <RequestSend />;
   }
-  return "OrderPage";
 };
 
 export default OrderPage;
