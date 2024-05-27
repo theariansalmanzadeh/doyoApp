@@ -6,7 +6,8 @@ import Input from "../generals/input/Input";
 import Divider from "../generals/Devider";
 import { useOrderSection, useSavedAddresses } from "@/state";
 import { ISavedAddresses } from "@/types";
-import MapPin from "./components/MapPin";
+import MapWrapper from "./components/MapWrapper";
+// import MapPin from "./components/MapPin";
 
 const AddAddress = () => {
   const [savedAddresses, setSavedAddresses] = useSavedAddresses();
@@ -45,7 +46,7 @@ const AddAddress = () => {
       </Stack>
       <Divider />
       <Box sx={{ width: "100%", height: "40vh", overflow: "hidden" }}>
-        <MapPin
+        <MapWrapper
           clickHandler={setIsMapPinned}
           isFieldEmpty={addressRef.current.Address.length > 0 ? false : true}
         />

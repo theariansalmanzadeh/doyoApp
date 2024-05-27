@@ -1,15 +1,13 @@
+"use client";
+
 import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { DigitalClock } from "@mui/x-date-pickers/DigitalClock";
+
 import { MultiSectionDigitalClock } from "@mui/x-date-pickers/MultiSectionDigitalClock";
 import { Box, Button, Modal } from "@mui/material";
 import { useOpenCalendar, useServiceRequest } from "@/state";
-import {
-  DateCalendar,
-  StaticDatePicker,
-  TimePicker,
-} from "@mui/x-date-pickers";
+import { DateCalendar } from "@mui/x-date-pickers";
 import dayjs from "dayjs";
 import { IDate } from "@/types";
 

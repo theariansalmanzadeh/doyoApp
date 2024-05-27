@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import StyleProvider from "@/components/generals/Styleprovider";
 import HomeLayout from "@/components/generals/Homelayout";
 import Navbar from "@/components/navbar/Navbar";
-import Footer from "@/components/footer/Footer";
+import "../node_modules/leaflet/dist/leaflet.css";
 import Menu from "@/components/sideMenu/Menu";
 
 export const metadata: Metadata = {

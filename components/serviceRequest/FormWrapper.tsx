@@ -38,7 +38,8 @@ const FormWrapper = ({ children }: { children: React.ReactNode }) => {
         <Typography
           sx={{
             transform:
-              orderSection.title === "success"
+              orderSection.title === "success" ||
+              orderSection.title === "address"
                 ? "translateX(50%)"
                 : "translateX(0%)",
           }}

@@ -8,7 +8,7 @@ import WhereForm from "@/components/serviceRequest/whereForm/WhereForm";
 import Summary from "@/components/summary/Summary";
 import { useOrderSection } from "@/state";
 
-const OrderPage = () => {
+const Page = () => {
   const [orderSection] = useOrderSection();
   switch (orderSection.page) {
     case 1:
@@ -26,4 +26,4 @@ const OrderPage = () => {
   }
 };
 
-export default OrderPage;
+export default Page;
