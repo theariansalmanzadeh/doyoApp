@@ -1,5 +1,7 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
-import appStore from "@/assets/images/appStoreBtn.png";
+import appStore from "@/assets/images/appstore.png";
+import playStore from "@/assets/images/googleplay.png";
+import mobilePreview from "@/assets/images/mobileDemo.png";
 import Image from "next/image";
 
 const MobileApp = () => {
@@ -11,7 +13,9 @@ const MobileApp = () => {
       bgcolor="#edeeee"
       justifyContent="space-between"
     >
-      <Box></Box>
+      <Box>
+        <Image src={mobilePreview} alt="Sorosh mobile app" />
+      </Box>
       <Stack gap="10px" padding="40px 0px" flexBasis="50%">
         <Typography variant="h6"> Pro services in your hands</Typography>
         <Typography>
@@ -23,7 +27,11 @@ const MobileApp = () => {
             <Image src={appStore} width="150" alt="app store" />
           </Button>
           <Button sx={{ padding: "0px" }}>
-            <Image src={appStore} style={{ width: "150px" }} alt="app store" />
+            <Image
+              src={playStore}
+              style={{ width: "150px" }}
+              alt="play store"
+            />
           </Button>
         </Box>
       </Stack>

@@ -4,7 +4,7 @@ import React from "react";
 import { items } from "./content";
 import Link from "next/link";
 import Login from "./Login";
-import Logo from "@/assets/images/marker-doyo.png";
+import Logo from "@/assets/images/logo.png";
 
 const Navbar = () => {
   return (
@@ -17,7 +17,11 @@ const Navbar = () => {
       borderBottom="4px solid #000"
     >
       <Stack direction="row" padding="0px">
-        <Image src={Logo} alt="logo" width={60} />
+        <Stack direction="row" alignItems="center">
+          <Image src={Logo} alt="logo" width={60} />
+
+          <Typography variant="h5">Doyo</Typography>
+        </Stack>
         <Stack
           alignItems="center"
           gap="20px"

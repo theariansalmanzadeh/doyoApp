@@ -16,7 +16,9 @@ const colorPallet = {
   sky: { 100: "#3347FF" },
 
   primary: { 100: "#ffc508", main: "#ffc508" },
-  secondary: { main: "#030335", 100: "#06065c" },
+  secondary: { main: "#030335", 100: "#06065c", light: "#06065c" },
+  warning: "",
+  // success,
   alert: { critical: { 100: "#FD5E66", 200: "#ca4b52" } },
 };
 

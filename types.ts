@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type TOrderSection =
   | "what"
   | "when"
@@ -5,6 +7,16 @@ export type TOrderSection =
   | "address"
   | "summary"
   | "success";
+
+export type TRequestTitle =
+  | "My Requests"
+  | "Invoice"
+  | "provider list"
+  | "Provider Profile"
+  | "Wallet"
+  | number;
+
+export type TOrderState = "Pending" | "Accepted" | "Doing" | "Denied";
 
 export interface IServiceRequest {
   services: Set<string>;
@@ -31,4 +43,12 @@ export enum Services {
   "Window Cleaning" = "3",
   "Deep Cleaning" = "4",
   "Move-in/Move-out Cleaning" = "5",
+}
+
+export interface IDoingRequest {
+  serviceProvider: string;
+  imgUrl: StaticImageData | null;
+  orderNumber: string;
+  serviceType: string;
+  data: string;
 }

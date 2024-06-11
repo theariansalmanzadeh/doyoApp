@@ -5,7 +5,7 @@ import ActionButtons from "./components/ActionButtons";
 import { useServiceRequest } from "@/state";
 import { IDate } from "@/types";
 
-const Summary = () => {
+const Summary = ({ hasSubmitBtn = true }: { hasSubmitBtn?: boolean }) => {
   const [serviceRequest] = useServiceRequest();
   const format = (time: string | IDate) => {
     if (typeof time === "string") return time;
@@ -88,7 +88,7 @@ const Summary = () => {
         </Stack>
       </Stack>
 
-      <ActionButtons />
+      {hasSubmitBtn && <ActionButtons />}
     </Box>
   );
 };

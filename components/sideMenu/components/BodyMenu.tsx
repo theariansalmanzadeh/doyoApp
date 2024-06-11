@@ -10,7 +10,7 @@ const BodyMenu = () => {
         <Link key={item.label} href="/">
           <Stack direction="row" gap="10px">
             {item.label === "Requests" ? (
-              <Link href="/order">
+              <Link href="/requests">
                 <item.icon />
                 <Typography
                   variant="body1"
