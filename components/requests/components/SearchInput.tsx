@@ -17,8 +17,6 @@ const SearchInput = () => {
       fontSize: 16,
       width: "100%",
       padding: "22px 12px",
-      // border: "1px solid",
-      // borderColor: theme.palette.primary.main,
       transition: theme.transitions.create([
         "border-color",
         "background-color",

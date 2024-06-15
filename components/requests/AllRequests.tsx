@@ -5,37 +5,42 @@ import { Stack } from "@mui/material";
 import React from "react";
 import RequestBox from "../generals/requests/RequestBox";
 import NewRequestBtn from "./components/NewRequestBtn";
-import { useRequestInfos, useRequestSection } from "@/state";
+import { useRequestInfos, useRequestSection, useRequests } from "@/state";
 
 const Requests = () => {
   const [, setRequestSection] = useRequestSection();
   const [, setRequestInfos] = useRequestInfos();
+  const [requests] = useRequests();
   return (
     <Stack sx={{ width: "100%", gap: "24px" }}>
       <SearchInput />
-      <RequestBox
-        title={"cleaning"}
-        timeOrder={3}
-        state="Pending"
-        orderNumber={434357}
-      />
-      <Stack
-        onClick={() => {
-          setRequestInfos({
-            service: "cleaning",
-            orderNumber: 434357,
-            timeOrder: 3,
-          });
-          setRequestSection({ title: "provider list", pageNumber: 2 });
-        }}
-      >
-        <RequestBox
-          title={"cleaning"}
-          timeOrder={3}
-          state="Accepted"
-          orderNumber={434357}
-        />
-      </Stack>
+
+      {requests.map((request) => (
+        <Stack
+          key={request.number}
+          onClick={() => {
+            setRequestInfos({
+              service: "cleaning",
+              orderNumber: 434357,
+              timeOrder: 3,
+              isPaid: false,
+              paymentHash: "",
+            });
+            if (request.state === "Accepted")
+              setRequestSection({ title: "provider list", pageNumber: 2 });
+            else if (request.state === "Doing")
+              setRequestSection({ title: "Invoice", pageNumber: 5 });
+          }}
+        >
+          <RequestBox
+            title={request.title}
+            timeOrder={request.orderTime}
+            state={request.state}
+            orderNumber={request.number}
+          />
+        </Stack>
+      ))}
+
       <NewRequestBtn />
     </Stack>
   );

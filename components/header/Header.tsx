@@ -7,10 +7,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <Stack
-      direction="row"
-      alignItems="center"
-      justifyContent="center"
+    <Box
       sx={{
         padding: "0px 200px",
         width: "100%",
@@ -19,13 +16,12 @@ const Header = () => {
         backgroundImage: `linear-gradient(to right bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(${bg.src})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-
-        gap: "45px",
+        position: "relative",
       }}
     >
       <Content />
       <SearchInput />
-    </Stack>
+    </Box>
   );
 };
 

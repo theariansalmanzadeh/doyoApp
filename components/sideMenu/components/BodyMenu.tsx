@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const BodyMenu = () => {
   return (
-    <Stack padding="40px 0px 0px 20px" gap="40px">
+    <Stack padding="40px 0px 0px 20px" gap="40px" alignItems="center">
       {bodyMenuItems.map((item) => (
         <Link key={item.label} href="/">
           <Stack direction="row" gap="10px">

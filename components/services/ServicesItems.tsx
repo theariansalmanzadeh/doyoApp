@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ServicesItems = () => {
   return (
-    <Stack flexWrap="wrap" direction="row" gap="40px">
+    <Stack flexWrap="wrap" direction="row" gap={{ xs: "10px", md: "40px" }}>
       {Items.map((item) => (
         <Stack
           padding="30px"

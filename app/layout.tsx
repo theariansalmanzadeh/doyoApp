@@ -6,6 +6,7 @@ import HomeLayout from "@/components/generals/Homelayout";
 import Navbar from "@/components/navbar/Navbar";
 import "../node_modules/leaflet/dist/leaflet.css";
 import Menu from "@/components/sideMenu/Menu";
+import Web3Provider from "@/components/generals/Web3Provider";
 
 export const metadata: Metadata = {
   title: "Doyo app",
@@ -21,11 +22,13 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AppRouterCacheProvider options={{ key: "css" }}>
-          <StyleProvider>
-            <Navbar />
-            <Menu />
-            {children}
-          </StyleProvider>
+          <Web3Provider>
+            <StyleProvider>
+              <Navbar />
+              <Menu />
+              {children}
+            </StyleProvider>
+          </Web3Provider>
         </AppRouterCacheProvider>
       </body>
     </html>

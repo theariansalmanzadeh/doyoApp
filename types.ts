@@ -14,6 +14,8 @@ export type TRequestTitle =
   | "provider list"
   | "Provider Profile"
   | "Wallet"
+  | "Payment"
+  | "Transaction Submitted"
   | number;
 
 export type TOrderState = "Pending" | "Accepted" | "Doing" | "Denied";
@@ -48,7 +50,16 @@ export enum Services {
 export interface IDoingRequest {
   serviceProvider: string;
   imgUrl: StaticImageData | null;
-  orderNumber: string;
+  orderNumber: number;
   serviceType: string;
   data: string;
+  isPaid: boolean | string;
+}
+
+export interface IRequestState {
+  title: string;
+  orderTime: number;
+  number: number;
+  state: TOrderState;
+  serviceProvider: IDoingRequest | null;
 }

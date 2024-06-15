@@ -1,3 +1,5 @@
+"use client";
+
 import { useRequestSection } from "@/state";
 import { Button } from "@mui/material";
 import React from "react";
@@ -14,10 +16,10 @@ const ActionButton = () => {
         "&:hover": { backgroundColor: "secondary.dark" },
       }}
       onClick={() => {
-        setRequestSection({ title: "Provider Profile", pageNumber: 4 });
+        setRequestSection({ title: "Wallet", pageNumber: 6 });
       }}
     >
-      Accept
+      Checkout
     </Button>
   );
 };

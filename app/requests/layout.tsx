@@ -5,7 +5,11 @@ import React from "react";
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Stack alignItems="center" justifyContent="center">
-      <Box width="30%" sx={{ marginY: "50px" }}>
+      <Box
+        width={{ xs: "100%", sm: "90%", md: "50%", lg: "30%" }}
+        padding={{ xs: "25px" }}
+        sx={{ marginY: "50px", position: "relative" }}
+      >
         <RequestWrapper>{children}</RequestWrapper>
       </Box>
     </Stack>

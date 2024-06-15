@@ -9,7 +9,10 @@ import { useIsMenuOpen } from "@/state";
 const Login = () => {
   const [, setIsMenuOpen] = useIsMenuOpen();
   return (
-    <Button onClick={() => setIsMenuOpen(true)}>
+    <Button
+      onClick={() => setIsMenuOpen(true)}
+      sx={{ position: "absolute", right: "0%" }}
+    >
       <Stack direction="row" alignItems="center" gap="15px">
         <Stack
           direction="row"

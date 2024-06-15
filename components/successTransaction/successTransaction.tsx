@@ -1,13 +1,11 @@
-"use client";
-
 import { Box, Button, Stack, Typography } from "@mui/material";
 import successful from "@/assets/images/verified-green.png";
-import Image from "next/image";
 import { styleBtn } from "@/app/styles/Inputbutton";
-import { useRouter } from "next/navigation";
+import Image from "next/image";
+import { useRequestSection } from "@/state";
 
-const RequestSend = () => {
-  const router = useRouter();
+const SuccessTransaction = () => {
+  const [, setRequestSection] = useRequestSection();
   return (
     <Stack alignItems="center" justifyItems="center" justifyContent="center">
       <Stack
@@ -17,20 +15,20 @@ const RequestSend = () => {
         gap="20px"
       >
         <Image src={successful} width="100" alt="success" />
-        <Typography variant="h5">Request submitted</Typography>
+        <Typography variant="h5">Transaction has been done</Typography>
       </Stack>
       <Box sx={{ marginTop: "50px" }}>
         <Button
           sx={{ ...styleBtn, marginTop: "30px", width: "100%" }}
           onClick={() => {
-            router.push("/requests");
+            setRequestSection({ title: "Invoice", pageNumber: 5 });
           }}
         >
-          My Requests
+          INVOICE DETAIL
         </Button>
       </Box>
     </Stack>
   );
 };
 
-export default RequestSend;
+export default SuccessTransaction;

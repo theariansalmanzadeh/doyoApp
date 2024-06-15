@@ -19,7 +19,7 @@ const RequestBox = ({
   state: TOrderState;
   orderNumber: number;
 }) => {
-  const [doingRequest, setDoingRequest] = useDoingRequest();
+  const [doingRequest] = useDoingRequest();
   function RequestBody(state: TOrderState) {
     if (state === "Pending")
       return (
@@ -58,12 +58,17 @@ const RequestBox = ({
       );
     else
       return (
-        <Image
-          src={doingRequest.imgUrl}
-          width="40"
-          alt="provider"
-          style={{ borderRadius: "50%" }}
-        />
+        <Stack direction="row" gap="5px">
+          <Image
+            src={doingRequest.imgUrl ?? ""}
+            width="40"
+            alt="provider"
+            style={{ borderRadius: "50%" }}
+          />
+          <Typography variant="body2" color="gray.300">
+            By {doingRequest.serviceProvider}
+          </Typography>
+        </Stack>
       );
   }
   return (
@@ -72,7 +77,7 @@ const RequestBox = ({
       bgcolor="#eee"
       padding="10px"
       borderRadius="8px"
-      sx={{ cursor: state === "Accepted" ? "pointer" : "auto" }}
+      sx={{ cursor: state === "Accepted" || "Doing" ? "pointer" : "auto" }}
     >
       <Stack direction="row" justifyContent="space-between" alignItems="center">
         <Stack direction="row" alignItems="center" gap="5px">

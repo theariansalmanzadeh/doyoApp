@@ -9,7 +9,7 @@ const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useIsMenuOpen();
   return (
     <Drawer open={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
-      <Box width="30vw">
+      <Box width={{ xxs: "100vw", lg: "30vw" }}>
         <HeaderMenu />
         <BodyMenu />
       </Box>

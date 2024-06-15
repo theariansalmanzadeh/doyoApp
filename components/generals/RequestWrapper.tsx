@@ -14,7 +14,6 @@ const RequestWrapper = ({ children }: { children: React.ReactNode }) => {
         direction="row"
         justifyContent="space-between"
         paddingBottom="50px"
-        // width={"50%"}
         position="relative"
       >
         <Button

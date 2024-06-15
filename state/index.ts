@@ -1,5 +1,6 @@
 import {
   IDoingRequest,
+  IRequestState,
   ISavedAddresses,
   IServiceRequest,
   TOrderSection,
@@ -39,11 +40,38 @@ const requestSection = atom<{ title: TRequestTitle; pageNumber: number }>({
 
 export const useRequestSection = () => useAtom(requestSection);
 
+const requests = atom<IRequestState[]>([
+  {
+    title: "cleaning",
+    orderTime: 3,
+    number: 423553,
+    state: "Accepted",
+    serviceProvider: null,
+  },
+  {
+    title: "cleaning",
+    orderTime: 5,
+    number: 421563,
+    state: "Pending",
+    serviceProvider: null,
+  },
+]);
+
+export const useRequests = () => useAtom(requests);
+
 const requestInfos = atom<{
   service: string;
   orderNumber: number;
   timeOrder: number;
-}>({ service: "", orderNumber: 0, timeOrder: 0 });
+  isPaid: boolean;
+  paymentHash: string;
+}>({
+  service: "",
+  orderNumber: 0,
+  timeOrder: 0,
+  isPaid: false,
+  paymentHash: "",
+});
 
 export const useRequestInfos = () => useAtom(requestInfos);
 
@@ -82,9 +110,10 @@ export const useProfileInfo = () => useAtom(profileInfo);
 const doingRequest = atom<IDoingRequest>({
   serviceProvider: "",
   imgUrl: null,
-  orderNumber: "",
+  orderNumber: -1,
   data: "",
   serviceType: "",
+  isPaid: "",
 });
 
 export const useDoingRequest = () => useAtom(doingRequest);

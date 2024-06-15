@@ -40,17 +40,17 @@ const ProfileSummary = () => {
             <Typography variant="body2">{profileInfo.name}</Typography>
             <Stack direction="row" gap="2px" alignItems="start">
               {displayStars()}
-              <Typography color="#909090">({profileInfo.votes})</Typography>
+              <Typography color="gray.500">({profileInfo.votes})</Typography>
             </Stack>
           </Stack>
         </Stack>
         <Typography variant="subtitle1">${profileInfo.wage}/hour</Typography>
       </Stack>
       <Stack direction="row" gap="17px" marginTop="25px">
-        <Typography color="#909090" variant="caption">
+        <Typography color="gray.500" variant="caption">
           Jobs done: <span style={{ color: "#000" }}>322</span>
         </Typography>
-        <Typography color="#909090" variant="caption">
+        <Typography color="gray.500" variant="caption">
           Tools :{" "}
           <span style={{ color: "#000" }}>cleaning machine, Dryers</span>
         </Typography>

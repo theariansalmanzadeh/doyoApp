@@ -3,7 +3,7 @@ import React from "react";
 
 const Content = () => {
   return (
-    <Stack gap="50px">
+    <Stack gap={{ xs: "30px", lg: "50px" }}>
       <Box>
         <Typography variant="subtitle1">
           Are you professional and looking for a job? Start your business now.
