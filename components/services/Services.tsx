@@ -7,7 +7,7 @@ const Services = () => {
       padding={{
         xs: "100px 24px 20px 24px",
         md: "40px 60px ",
-        lg: "40px 350px ",
+        lg: "40px 210px ",
       }}
       bgcolor="#fff"
     >

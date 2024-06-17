@@ -9,6 +9,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
         width={{ xs: "100%", sm: "90%", md: "50%", lg: "30%" }}
         padding={{ xs: "25px" }}
         sx={{ marginY: "50px", position: "relative" }}
+        minHeight="100vh"
       >
         <RequestWrapper>{children}</RequestWrapper>
       </Box>

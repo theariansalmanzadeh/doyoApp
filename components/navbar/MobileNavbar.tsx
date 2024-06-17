@@ -8,11 +8,12 @@ import Image from "next/image";
 const MobileNavbar = () => {
   return (
     <Stack
+      display={{ xxs: "flex", md: "none" }}
       direction="row"
       justifyContent="space-between"
       position="sticky"
       zIndex={100}
-      top="95vh"
+      bottom="0"
       right="0"
       width="100%"
       bgcolor="white.400"

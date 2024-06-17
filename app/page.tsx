@@ -5,16 +5,17 @@ import Blogs from "@/components/Blogs";
 import Contact from "@/components/contact/Contact";
 import MobileApp from "@/components/MobileApp";
 import Footer from "@/components/footer/Footer";
+import { Box } from "@mui/material";
 
 export default function Home() {
   return (
-    <main>
+    <Box minHeight="100vh">
       <Header />
       <Services />
       <MobileApp />
       <Contact />
       <Blogs />
       <Footer />
-    </main>
+    </Box>
   );
 }
