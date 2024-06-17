@@ -13,6 +13,7 @@ export type TRequestTitle =
   | "Invoice"
   | "provider list"
   | "Provider Profile"
+  | "Provider chat"
   | "Wallet"
   | "Payment"
   | "Transaction Submitted"

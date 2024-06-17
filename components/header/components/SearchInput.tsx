@@ -25,8 +25,8 @@ const SearchInput = () => {
         backgroundColor: "#edeeee",
         boxShadow: "none",
         fontSize: 16,
-        width: isLgDown ? "60vw" : "35vw",
-        padding: "25px 12px",
+        width: isLgDown ? "64vw" : "35vw",
+        padding: isLgDown ? "20.5px 12px" : "25px 12px",
         transition: theme.transitions.create([
           "border-color",
           "background-color",

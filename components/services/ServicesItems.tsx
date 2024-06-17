@@ -7,7 +7,7 @@ const ServicesItems = () => {
   return (
     <Stack
       flexWrap="wrap"
-      justifyContent={{ xxs: "center", md: "start" }}
+      justifyContent={{ xxs: "space-between", md: "start" }}
       alignItems="center"
       direction="row"
       gap={{ xs: "10px", md: "40px" }}

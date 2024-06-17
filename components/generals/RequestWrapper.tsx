@@ -3,6 +3,8 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useRequestSection } from "@/state";
 import { useRouter } from "next/navigation";
+import { requestBackwardSection } from "@/lib/generals";
+import { TRequestTitle } from "@/types";
 
 const RequestWrapper = ({ children }: { children: React.ReactNode }) => {
   const [requestSection, setRequestSection] = useRequestSection();
@@ -18,10 +20,16 @@ const RequestWrapper = ({ children }: { children: React.ReactNode }) => {
         <Button
           sx={{ color: "#000" }}
           onClick={() => {
-            // setRequestSection({
-            //   title: nextTitle(orderSection.title),
-            //   page: pageForward,
-            // });
+            const section = requestBackwardSection(requestSection);
+            if (typeof section === "string" && section === "home") {
+              router.push("/");
+            } else {
+              if (!!section)
+                setRequestSection({
+                  title: section.title as TRequestTitle,
+                  pageNumber: section?.pageNumber,
+                });
+            }
           }}
         >
           <ArrowBackIcon />

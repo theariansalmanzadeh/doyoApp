@@ -29,9 +29,9 @@ const ServiceProviderList = () => {
     <Stack paddingTop="34px">
       <Typography variant="subtitle1">Select Service provider</Typography>
       <Stack direction="column">
-        {dummy_providers.map((provider) => (
+        {dummy_providers.map((provider, indx) => (
           <Stack
-            key={provider.name}
+            key={indx}
             direction="row"
             justifyContent="space-between"
             marginTop="35px"

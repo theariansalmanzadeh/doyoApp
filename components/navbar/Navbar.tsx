@@ -34,10 +34,13 @@ const Navbar = () => {
               position={{ xxs: "absolute", lg: "relative" }}
               left={{ xxs: "50%", lg: "0%" }}
               sx={{
-                transform: { xxs: "translate(-50%,30%)", lg: "translate(0%)" },
+                transform: {
+                  xxs: "translate(-50%,30%)",
+                  lg: "translate(0%)",
+                },
               }}
             >
-              Doyo
+              <Link href="/">Doyo</Link>
             </Typography>
           </Stack>
           <Stack
