@@ -6,7 +6,10 @@ const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Stack alignItems="center" justifyContent="center">
       <TimeModal />
-      <Box width="25%" sx={{ marginY: "50px" }}>
+      <Box
+        width={{ xxs: "90%", sm: "90%", md: "50%", lg: "30%" }}
+        sx={{ marginY: "50px" }}
+      >
         <FormWrapper>{children}</FormWrapper>
       </Box>
     </Stack>

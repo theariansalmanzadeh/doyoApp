@@ -1,10 +1,17 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { Items } from "./content";
 import Image from "next/image";
+import Link from "next/link";
 
 const ServicesItems = () => {
   return (
-    <Stack flexWrap="wrap" direction="row" gap={{ xs: "10px", md: "40px" }}>
+    <Stack
+      flexWrap="wrap"
+      justifyContent={{ xxs: "center", md: "start" }}
+      alignItems="center"
+      direction="row"
+      gap={{ xs: "10px", md: "40px" }}
+    >
       {Items.map((item) => (
         <Stack
           padding="30px"
@@ -15,9 +22,15 @@ const ServicesItems = () => {
           key={item.label}
           width="150px"
         >
-          <Image src={item.imgUrl} width="100" height="100" alt={item.label} />
-
-          <Typography color="#000">{item.label}</Typography>
+          <Link href="/order">
+            <Image
+              src={item.imgUrl}
+              width="100"
+              height="100"
+              alt={item.label}
+            />
+            <Typography color="#000">{item.label}</Typography>
+          </Link>
         </Stack>
       ))}
     </Stack>

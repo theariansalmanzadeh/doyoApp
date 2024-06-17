@@ -19,7 +19,7 @@ const RequestSend = () => {
         <Image src={successful} width="100" alt="success" />
         <Typography variant="h5">Request submitted</Typography>
       </Stack>
-      <Box sx={{ marginTop: "50px" }}>
+      <Box sx={{ marginTop: "50px", width: "80%" }}>
         <Button
           sx={{ ...styleBtn, marginTop: "30px", width: "100%" }}
           onClick={() => {

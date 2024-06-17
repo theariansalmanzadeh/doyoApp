@@ -29,6 +29,8 @@ const RequestPage = () => {
       return <Wallet />;
     case 7:
       return <Payment />;
+    // case 7:
+    //   return <Payment />;
   }
 };
 

@@ -92,7 +92,7 @@ const TableContent = () => {
                   borderBottom: "none",
                 }}
               >
-                {content.totalFee}
+                ${content.totalFee}
               </TableCell>
             </TableRow>
           ))}
@@ -140,7 +140,7 @@ const TableContent = () => {
                 borderBottom: "none",
               }}
             >
-              {232}
+              ${232}
             </TableCell>
           </TableRow>
         </TableBody>

@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import React from "react";
 import { dummy_data } from "../content";
-import PaymentChoice from "./paymentChoise";
+import PaymentChoice from "./PaymentChoise";
 import { useDoingRequest, useRequestInfos } from "@/state";
 import TransactionInvoice from "./TransactionInvoice";
 
@@ -16,6 +16,12 @@ const PaymentType = () => {
       <Typography variant="subtitle1">Payment Method</Typography>
       <Stack direction="row" justifyContent="space-between" paddingTop="16px">
         {doingRequest.isPaid ? (
+          <TransactionInvoice
+            payment={"crypto"}
+            isActive={true}
+            hash={requestInfos.paymentHash}
+          />
+        ) : (
           dummy_data.map((data, indx) => (
             <PaymentChoice
               key={indx}
@@ -23,12 +29,6 @@ const PaymentType = () => {
               isActive={data.isActive}
             />
           ))
-        ) : (
-          <TransactionInvoice
-            payment={"crypto"}
-            isActive={true}
-            hash={requestInfos.paymentHash}
-          />
         )}
       </Stack>
     </Box>

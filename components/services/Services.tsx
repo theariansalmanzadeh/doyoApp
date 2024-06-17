@@ -11,7 +11,11 @@ const Services = () => {
       }}
       bgcolor="#fff"
     >
-      <Typography variant="h5" color="#000">
+      <Typography
+        variant="h5"
+        color="#000"
+        display={{ xs: "none", md: "block" }}
+      >
         What do you need?
       </Typography>
       <ServicesItems />

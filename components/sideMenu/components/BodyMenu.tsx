@@ -1,14 +1,24 @@
+"use client";
+
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 import { bodyMenuItems } from "../content";
 import Link from "next/link";
+import { useIsMenuOpen } from "@/state";
 
 const BodyMenu = () => {
+  const [, setIsMenuOpen] = useIsMenuOpen();
   return (
-    <Stack padding="40px 0px 0px 20px" gap="40px" alignItems="center">
+    <Stack padding="40px 0px 0px 20px" gap="40px">
       {bodyMenuItems.map((item) => (
         <Link key={item.label} href="/">
-          <Stack direction="row" gap="10px">
+          <Stack
+            direction="row"
+            gap="10px"
+            onClick={() => {
+              setIsMenuOpen(false);
+            }}
+          >
             {item.label === "Requests" ? (
               <Link href="/requests">
                 <item.icon />

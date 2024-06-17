@@ -20,9 +20,9 @@ const Requests = () => {
           key={request.number}
           onClick={() => {
             setRequestInfos({
-              service: "cleaning",
-              orderNumber: 434357,
-              timeOrder: 3,
+              service: request.title,
+              orderNumber: request.number,
+              timeOrder: request.orderTime,
               isPaid: false,
               paymentHash: "",
             });

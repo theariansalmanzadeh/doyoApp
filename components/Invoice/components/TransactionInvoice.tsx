@@ -1,6 +1,6 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
-import PaymentChoice from "./paymentChoise";
+import PaymentChoice from "./PaymentChoise";
 import { displayAddress } from "@/lib/wallet";
 import Link from "next/link";
 

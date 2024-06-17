@@ -47,6 +47,7 @@ const requests = atom<IRequestState[]>([
     number: 423553,
     state: "Accepted",
     serviceProvider: null,
+    isPaid: false,
   },
   {
     title: "cleaning",
@@ -54,6 +55,7 @@ const requests = atom<IRequestState[]>([
     number: 421563,
     state: "Pending",
     serviceProvider: null,
+    isPaid: false,
   },
 ]);
 

@@ -1,4 +1,4 @@
-import { useAcceptedRequest, useProfileInfo } from "@/state";
+import { useProfileInfo } from "@/state";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import star from "@/assets/images/star.png";
 import serviceProvider3 from "@/assets/images/serviceman3.jpg";

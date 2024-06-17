@@ -7,6 +7,7 @@ import Image from "next/image";
 const MobileApp = () => {
   return (
     <Stack
+      display={{ xxs: "none", md: "flex" }}
       direction="row"
       margin="100px 0px 40px 0px"
       padding="0px 200px"

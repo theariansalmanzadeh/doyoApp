@@ -62,4 +62,5 @@ export interface IRequestState {
   number: number;
   state: TOrderState;
   serviceProvider: IDoingRequest | null;
+  isPaid: boolean;
 }

@@ -49,6 +49,7 @@ const ActionButtons = () => {
             imgUrl: profileInfo.imgUrl,
             orderNumber: requestInfos.orderNumber,
             serviceType: requestInfos.service,
+            isPaid: false,
             data: Date(),
           };
           setDoingRequest({
@@ -63,6 +64,11 @@ const ActionButtons = () => {
           const filteredReq = requests.filter(
             (request) => request.number !== requestInfos.orderNumber
           );
+          console.log(
+            filteredReq,
+            filteredReq[0].number,
+            requestInfos.orderNumber
+          );
 
           setRequests([
             ...filteredReq,
@@ -70,7 +76,7 @@ const ActionButtons = () => {
               number: requestInfos.orderNumber,
               orderTime: 1,
               serviceProvider: providerInfo,
-
+              isPaid: false,
               title: requestInfos.service,
               state: "Doing",
             },

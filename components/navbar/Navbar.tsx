@@ -30,7 +30,12 @@ const Navbar = () => {
 
             <Typography
               variant="h5"
-              sx={{ position: { xxs: "absolute", md: "block" } }}
+              // sx={{ position: { xxs: "absolute", lg: "in" } }}
+              position={{ xxs: "absolute", lg: "relative" }}
+              left={{ xxs: "50%", lg: "0%" }}
+              sx={{
+                transform: { xxs: "translate(-50%,30%)", lg: "translate(0%)" },
+              }}
             >
               Doyo
             </Typography>
@@ -51,7 +56,7 @@ const Navbar = () => {
         </Stack>
         <Login />
       </Stack>
-      {isLgDown && <MobileNavbar />}
+      {/* {isLgDown && <MobileNavbar />} */}
     </>
   );
 };

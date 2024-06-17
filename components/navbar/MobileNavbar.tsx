@@ -12,7 +12,7 @@ const MobileNavbar = () => {
       justifyContent="space-between"
       position="sticky"
       zIndex={100}
-      top="100vh"
+      top="95vh"
       right="0"
       width="100%"
       bgcolor="white.400"
