@@ -14,6 +14,7 @@ const Services = () => {
       <Typography
         variant="h5"
         color="#000"
+        paddingBottom="40px"
         display={{ xs: "none", md: "block" }}
       >
         What do you need?

@@ -10,7 +10,7 @@ const Download = () => {
     <Stack
       padding={{ xxs: "20px 10px", md: "40px 200px" }}
       alignItems="center"
-      gap="50px"
+      gap="150px"
     >
       <Box>
         <Typography variant="h5" paddingBottom="30px">

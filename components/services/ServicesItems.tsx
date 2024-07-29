@@ -10,7 +10,7 @@ const ServicesItems = () => {
       justifyContent={{ xxs: "space-between", md: "start" }}
       alignItems="center"
       direction="row"
-      gap={{ xxs: "20px", md: "68px" }}
+      gap={{ xxs: "20px", md: "40px" }}
     >
       {Items.map((item) => (
         <Link key={item.label} href="/order">
@@ -19,7 +19,7 @@ const ServicesItems = () => {
             alignItems="center"
             justifyContent="center"
             border="1px solid #eee"
-            width={{ xxs: "100%", md: "175px" }}
+            width={{ xxs: "100%", md: "200px" }}
             minWidth="160px"
             overflow="hidden"
             position="relative"

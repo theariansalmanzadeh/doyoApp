@@ -8,6 +8,7 @@ import Link from "next/link";
 import Login from "./Login";
 import Logo from "@/assets/images/logo.png";
 import MobileNavbar from "./MobileNavbar";
+import BecomeTasker from "./BecomeTasker";
 
 const Navbar = () => {
   const { breakpoints } = useTheme();
@@ -57,7 +58,10 @@ const Navbar = () => {
             ))}
           </Stack>
         </Stack>
-        <Login />
+        <Stack direction="row" gap="10px">
+          <BecomeTasker />
+          <Login />
+        </Stack>
       </Stack>
       {/* {isLgDown && <MobileNavbar />} */}
     </>

@@ -13,10 +13,12 @@ import {
 } from "@/state";
 import { hasLink, isRequestSection, sectionHandler } from "@/lib/generals";
 import { TOrderSection, TRequestTitle } from "@/types";
+import { useRouter } from "next/navigation";
 
 const BodyMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useIsMenuOpen();
   const [taskerRef] = useElementTasker();
+  const router = useRouter();
   const [isScroll, setIsScroll] = useIsScroll();
   const [, setOrderSection] = useOrderSection();
   const [, setRequestSection] = useRequestSection();
@@ -28,9 +30,12 @@ const BodyMenu = () => {
           <Stack
             direction="row"
             gap="10px"
-            onClick={(e) => {
+            onClick={() => {
               const isRequestPage = isRequestSection(item.label);
               const section = sectionHandler(item.label);
+
+              console.log(section, isRequestPage, hasLink(item.label));
+
               if (!!section)
                 isRequestPage
                   ? setRequestSection({
@@ -42,11 +47,6 @@ const BodyMenu = () => {
                       page: section.number,
                     });
               setIsMenuOpen(false);
-              if (item.label.includes("Tasker")) {
-                e.preventDefault();
-                setIsScroll(true);
-                // taskerRef.current.scrollIntoView();
-              }
             }}
           >
             {hasLink(item.label) ? (

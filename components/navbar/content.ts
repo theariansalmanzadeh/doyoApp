@@ -1,5 +1,6 @@
 export const items = [
-  { label: "Home", url: "" },
+  { label: "Services", url: "tokenomics" },
+  { label: "Taskers", url: "tokenomics" },
   { label: "Tokenomics", url: "tokenomics" },
-  { label: "DownLoads", url: "download" },
+  { label: "Downloads", url: "download" },
 ];
