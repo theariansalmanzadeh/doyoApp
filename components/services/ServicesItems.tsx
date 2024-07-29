@@ -10,24 +10,25 @@ const ServicesItems = () => {
       justifyContent={{ xxs: "space-between", md: "start" }}
       alignItems="center"
       direction="row"
-      gap={{ xxs: "20px", md: "10px" }}
+      gap={{ xxs: "20px", md: "68px" }}
     >
       {Items.map((item) => (
-        <Stack
-          padding={{ xxs: "40px 20px", lg: "20px" }}
-          borderRadius="4px"
-          alignItems="center"
-          justifyContent="center"
-          border="1px solid #eee"
-          key={item.label}
-          // maxWidth="175px"
-          minWidth="160px"
-        >
-          <Link href="/order">
-            <Image src={item.imgUrl} width="75" height="75" alt={item.label} />
-            <Typography color="#000">{item.label}</Typography>
-          </Link>
-        </Stack>
+        <Link key={item.label} href="/order">
+          <Stack
+            borderRadius="5px"
+            alignItems="center"
+            justifyContent="center"
+            border="1px solid #eee"
+            width={{ xxs: "100%", md: "175px" }}
+            minWidth="160px"
+            overflow="hidden"
+            position="relative"
+            className="service-item"
+          >
+            <Image src={item.imgUrl} alt={item.label} />
+            {/* <Typography color="#000">{item.label}</Typography> */}
+          </Stack>
+        </Link>
       ))}
     </Stack>
   );

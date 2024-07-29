@@ -8,12 +8,12 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import HandymanIcon from "@mui/icons-material/Handyman";
 
 export const bodyMenuItems = [
-  { label: "Requests", icon: HandymanIcon },
-  { label: "Referral", icon: CurrencyExchangeIcon },
+  { label: "Services", icon: HandymanIcon, link: "services" },
+  { label: "Taskers", icon: CurrencyExchangeIcon },
   { label: "Addresses", icon: MapIcon },
-  { label: "Wallet", icon: AccountBalanceWalletIcon },
+  { label: "Tokenomics", icon: AccountBalanceWalletIcon, link: "tokenominc" },
   { label: "Support", icon: SupportAgentIcon },
-  { label: "Become an Expert", icon: PersonOutlineIcon },
+  { label: "Become a Tasker", icon: PersonOutlineIcon, link: "tasker-form" },
   { label: "Terms", icon: ReceiptLongIcon },
   { label: "Logout", icon: ExitToAppIcon },
 ];

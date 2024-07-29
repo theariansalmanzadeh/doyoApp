@@ -9,13 +9,19 @@ const MobileApp = () => {
     <Stack
       display={{ xxs: "none", md: "flex" }}
       direction="row"
-      margin="100px 0px 40px 0px"
+      margin="100px 0px 150px 0px"
       padding="0px 200px"
       bgcolor="#edeeee"
       justifyContent="space-between"
+      position="relative"
     >
       <Box>
-        <Image src={mobilePreview} alt="Sorosh mobile app" />
+        <Image
+          src={mobilePreview}
+          alt="Sorosh mobile app"
+          width="150"
+          style={{ position: "absolute", top: "-30%", left: "20%" }}
+        />
       </Box>
       <Stack gap="10px" padding="40px 0px" flexBasis="50%">
         <Typography variant="h6"> Pro services in your hands</Typography>

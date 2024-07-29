@@ -1,15 +1,23 @@
 "use client";
 
 import { Box, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { bodyMenuItems } from "../content";
 import Link from "next/link";
-import { useIsMenuOpen, useOrderSection, useRequestSection } from "@/state";
+import {
+  useElementTasker,
+  useIsMenuOpen,
+  useIsScroll,
+  useOrderSection,
+  useRequestSection,
+} from "@/state";
 import { hasLink, isRequestSection, sectionHandler } from "@/lib/generals";
 import { TOrderSection, TRequestTitle } from "@/types";
 
 const BodyMenu = () => {
-  const [, setIsMenuOpen] = useIsMenuOpen();
+  const [isMenuOpen, setIsMenuOpen] = useIsMenuOpen();
+  const [taskerRef] = useElementTasker();
+  const [isScroll, setIsScroll] = useIsScroll();
   const [, setOrderSection] = useOrderSection();
   const [, setRequestSection] = useRequestSection();
 
@@ -20,7 +28,7 @@ const BodyMenu = () => {
           <Stack
             direction="row"
             gap="10px"
-            onClick={() => {
+            onClick={(e) => {
               const isRequestPage = isRequestSection(item.label);
               const section = sectionHandler(item.label);
               if (!!section)
@@ -33,8 +41,12 @@ const BodyMenu = () => {
                       title: section?.title as TOrderSection,
                       page: section.number,
                     });
-
               setIsMenuOpen(false);
+              if (item.label.includes("Tasker")) {
+                e.preventDefault();
+                setIsScroll(true);
+                // taskerRef.current.scrollIntoView();
+              }
             }}
           >
             {hasLink(item.label) ? (

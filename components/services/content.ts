@@ -1,11 +1,11 @@
-import cleaning from "@/assets/images/cleaning.png";
-import plumbing from "@/assets/images/plumbing.png";
-import dog from "@/assets/images/dog.png";
-import electrity from "@/assets/images/electrity.png";
-import learning from "@/assets/images/learning.png";
-import ApplianceRepair from "@/assets/images/Applise-repair.png";
-import carService from "@/assets/images/car-service.png";
-import renovation from "@/assets/images/construction.png";
+import cleaning from "@/assets/images/cleaning.jpeg";
+import plumbing from "@/assets/images/plumbing.jpeg";
+import dog from "@/assets/images/petCare.jpeg";
+import electrity from "@/assets/images/electrical.jpeg";
+import learning from "@/assets/images/learning.jpeg";
+import ApplianceRepair from "@/assets/images/appliance.jpeg";
+import carService from "@/assets/images/carService.jpeg";
+import renovation from "@/assets/images/renovation.jpeg";
 
 export const Items = [
   { label: "cleaning", imgUrl: cleaning },

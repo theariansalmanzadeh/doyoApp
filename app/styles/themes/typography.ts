@@ -8,7 +8,7 @@ export const roboto = Roboto({
 });
 
 const typography = {
-  fontFamily: roboto.style.fontFamily,
+  fontFamily: "Montserrat",
   button: {
     textTransform: undefined,
   },

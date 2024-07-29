@@ -119,3 +119,9 @@ const doingRequest = atom<IDoingRequest>({
 });
 
 export const useDoingRequest = () => useAtom(doingRequest);
+
+const elementTasker = atom<any>(null);
+export const useElementTasker = () => useAtom(elementTasker);
+
+const isScroll = atom<boolean>(false);
+export const useIsScroll = () => useAtom(isScroll);

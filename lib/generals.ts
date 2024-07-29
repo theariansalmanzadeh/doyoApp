@@ -27,7 +27,7 @@ export const sectionHandler = (section: string) => {
       return { title: "where", number: 3 };
     case "Wallet":
       return { title: "wallet", number: 6 };
-    case "Requests":
+    case "service":
       return { title: "My Request", number: 1 };
   }
 };
@@ -37,7 +37,7 @@ export const isRequestSection = (section: string) => {
       return false;
     case "Wallet":
       return true;
-    case "Requests":
+    case "service":
       return true;
   }
 };
@@ -46,9 +46,9 @@ export const hasLink = (section: string) => {
   switch (section) {
     case "Addresses":
       return true;
-    case "Wallet":
+    case "tokenominc":
       return true;
-    case "Requests":
+    case "services":
       return true;
   }
 };
